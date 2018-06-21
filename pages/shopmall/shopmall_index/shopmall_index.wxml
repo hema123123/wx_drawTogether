@@ -1,0 +1,16 @@
+<!--pages/shopmall/shopmall_index/shopmall_index.wxml-->
+<view class="container shopmal_index flex-row">
+  <block wx:for="{{picsList}}" wx:key="{{item.id}}">
+    <view class="pic-list-item">
+      <image class="pic-list-item-img" src="{{item.goods_img}}" mode="aspectFit" />
+      <view class="pic-list-item-name">
+        <text>{{item.name}}</text>
+      </view>
+      <view class="pic-list-item-price">
+        <text class="pic-list-item-newprice">￥{{item.price}}</text>
+        <text class="pic-list-item-oldprice" wx:if="{{item.price < item.sale_price}}">￥{{item.sale_price}}</text>
+      </view>
+    </view>
+  </block>
+  <text hidden="{{isLoaded}}"  class="loading">加载中</text>
+</view>

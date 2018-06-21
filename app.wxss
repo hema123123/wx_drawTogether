@@ -1,0 +1,78 @@
+/**app.wxss**/
+
+page {
+  background: #f9f9f9;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+
+
+
+
+/* ===列表================== */
+
+.ft-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx;
+  background: #fff;
+  margin-bottom: 8rpx; /*列表之间为margin */
+}
+
+.ft-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 列表-图标 */
+
+.ft-item-icon {
+  flex: 0 0 36rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+/* 列表-内容 */
+
+.ft-item-text {
+  flex: 1;
+  font-size: 30rpx;
+  margin: 0 20rpx;
+  color: #353535;
+}
+
+/* 列表-描述 */
+
+.ft-item-des {
+  font-size: 24rpx;
+  color: #888;
+  display: flex;
+  align-items: center;
+}
+
+/* 列表-更多图标 */
+
+.ft-item-more {
+  flex: 0 0 26rpx;
+  width: 26rpx;
+  height: 26rpx;
+}

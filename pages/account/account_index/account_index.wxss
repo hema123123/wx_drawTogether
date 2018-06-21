@@ -1,0 +1,62 @@
+/* pages/account/account_index/account_index.wxss */
+
+/* 用户信息 */
+
+.userinfo {
+  width: 100%;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 48rpx;
+  padding: 20rpx;
+  position: relative;
+  background: #ff3f5c;
+}
+
+.userinfo .userinfo-avatar {
+  flex: 0 0 120rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.userinfo .userinfo-info {
+  flex: 1;
+  justify-content: center;
+}
+
+.userinfo .userinfo-set {
+  position: absolute;
+  right: 68rpx;
+  top: 20rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+
+
+
+
+
+
+
+
+/* 我的订单 */
+.userinfo-order .userinfo-order-item {
+  width: 25%;
+  font-size: 24rpx;
+  padding: 30rpx 0;
+  text-align: center;
+  align-items: center;
+  background: #fff;
+}
+
+.userinfo-order .userinfo-order-item-icon {
+  width: 56rpx;
+  height: 56rpx;
+  margin-bottom: 10rpx;
+}
+
+.userinfo-service {
+  margin: 10rpx 0 0 0;
+}

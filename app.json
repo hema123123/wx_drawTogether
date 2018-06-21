@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/account/account_index/account_index",
+    "pages/shopmall/shopmall_index/shopmall_index",
+    "pages/list/list_index/list_index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff3f5c",
+    "navigationBarTitleText": "一起画",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#ff3f5c",
+    "list": [
+      {
+        "pagePath": "pages/list/list_index/list_index",
+        "text": "活动",
+        "iconPath": "./static/images/tab_img/tab_list_normal_icon.png",
+        "selectedIconPath": "./static/images/tab_img/tab_list_selected_icon.png"
+      },
+      {
+        "pagePath": "pages/shopmall/shopmall_index/shopmall_index",
+        "text": "商城",
+        "iconPath": "./static/images/tab_img/tab_shop_normal_icon.png",
+        "selectedIconPath": "./static/images/tab_img/tab_shop_selected_icon.png"
+      },
+      {
+        "pagePath": "pages/account/account_index/account_index",
+        "text": "我的",
+        "iconPath": "./static/images/tab_img/tab_my_normal_icon.png",
+        "selectedIconPath": "./static/images/tab_img/tab_my_selected_icon.png"
+      }
+    ]
+  }
+}

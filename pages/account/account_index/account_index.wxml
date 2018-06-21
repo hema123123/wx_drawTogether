@@ -1,0 +1,37 @@
+<!--pages/account/account_index/account_index.wxml-->
+<view class="container account_index">
+  <view class="userinfo flex-row">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" />
+    <view class="userinfo-info flex-column">
+      <text class="userinfo-info-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-info-phone">15812345678</text>
+    </view>
+    <image class="userinfo-set" src="../../../static/images/account_img/my_set_icon.png" />
+  </view>
+
+
+  <view class="userinfo-order flex-row">
+    <block wx:for="{{orderList}}">
+      <navigator url="{{item.navigateTo}}" class="userinfo-order-item flex-column">
+        <image class="userinfo-order-item-icon" src="{{item.imgUrl}}" />
+        <text class="userinfo-order-item-text">{{item.text}}</text>
+      </navigator>
+    </block>
+  </view>
+
+
+  <view class="userinfo-service">
+    <block wx:for="{{serviceList}}">
+      <navigator url="{{item.navigateTo}}" class="userinfo-service-item ft-item">
+        <image class="userinfo-service-item-icon ft-item-icon" src="{{item.imgUrl}}" />
+        <text class="userinfo-service-text ft-item-text">{{item.text}}</text>
+        <view class="ft-item-des">
+          <text wx:if="{{item.des}}">{{item.des}}</text>
+          <image class="ft-item-more" src="../../../static/images/account_img/my_purse_icon.png" />
+        </view>
+      </navigator>
+    </block>
+  </view>
+
+
+</view>
