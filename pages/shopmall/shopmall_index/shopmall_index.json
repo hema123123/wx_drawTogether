@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "商城"
+  "navigationBarTitleText": "商城",
+  "usingComponents": {
+    "loading": "../../../component/loading/loading"
+  }
 }

@@ -1,0 +1,23 @@
+<!--pages/shopmall/shopmall_pro/shopmall_pro.wxml-->
+<import src="../../../static/plugin/wxParse/wxParse.wxml" />
+
+<view class="container shopmall_pro" wx:if="{{isLoaded}}">
+  <image class="pro-img" src="{{pro.goods_img}}" mode="widthFix" />
+  <view class="pro-info">
+    <text class="pro-name">{{pro.name}}</text>
+    <view class="pro-price">
+      <text wx:if="{{pro.sale_price<pro.price}}">￥{{pro.sale_price}}</text>
+      <text class="{{pro.sale_price<pro.price?'old-price':''}}">￥{{pro.price}}</text>
+    </view>
+  </view>
+  <view class="pro-icon flex-row">
+    <image class="pro-icon-img" src="../../../static/images/pop_right_icon.png" />
+    <text>正品承诺：品质商品一起画认证</text>
+  </view>
+  <view class="pro-detail flex-colunm">
+    <text class="pro-detail-title">商品详情</text>
+    <view class="pro-detail-con">
+     <template is="wxParse" data="{{wxParseData:article.nodes}}" /> 
+     </view>
+  </view>
+</view>

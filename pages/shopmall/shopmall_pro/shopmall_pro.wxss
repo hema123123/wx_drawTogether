@@ -1,0 +1,82 @@
+/* pages/shopmall/shopmall_pro/shopmall_pro.wxss */
+
+.pro-img {
+  width: 100%;
+}
+
+.pro-info {
+  background: #fff;
+  padding: 20rpx;
+}
+
+.pro-info .pro-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #353535;
+}
+
+.pro-info .pro-price {
+  color: #ff3f5c;
+  font-size: 48rpx;
+  font-weight: 700;
+  margin-top: 20rpx;
+}
+
+.pro-info .old-price {
+  text-decoration: line-through;
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  color: #888;
+  font-weight: normal;
+}
+
+.pro-icon {
+  padding: 20rpx;
+  font-size: 24rpx;
+  color: #666;
+  align-items: center;
+}
+
+.pro-icon .pro-icon-img {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+
+.pro-detail {
+  padding: 20rpx;
+  background: #fff;
+  text-align: center;
+}
+
+.pro-detail .pro-detail-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #353535;
+  position: relative;
+}
+
+.pro-detail .pro-detail-con {
+  
+  margin-top: 20rpx;
+  color: #888;
+  font-size: 32rpx;
+}
+
+.pro-detail .pro-detail-title::before, .pro-detail .pro-detail-title::after {
+  content: "";
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 50%;
+  background: #353535;
+  position: absolute;
+  top: 50%;
+}
+
+.pro-detail .pro-detaol-title::before {
+  left: -20rpx;
+}
+
+.pro-detail .pro-detaol-title::after {
+  right: -20rpx;
+}

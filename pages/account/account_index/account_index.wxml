@@ -1,12 +1,18 @@
 <!--pages/account/account_index/account_index.wxml-->
 <view class="container account_index">
+
   <view class="userinfo flex-row">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" />
-    <view class="userinfo-info flex-column">
-      <text class="userinfo-info-nickname">{{userInfo.nickName}}</text>
-      <text class="userinfo-info-phone">15812345678</text>
-    </view>
-    <image class="userinfo-set" src="../../../static/images/account_img/my_set_icon.png" />
+    <block wx:if="{{!isAuthUserInfo && canIUse}}">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain> 您还未授权，请前往授权 </button>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" />
+      <view class="userinfo-info flex-column">
+        <text class="userinfo-info-nickname">{{userInfo.nickName}}</text>
+        <text class="userinfo-info-phone">15812345678</text>
+      </view>
+      <image class="userinfo-set" src="../../../static/images/account_img/my_set_icon.png" />
+    </block>
   </view>
 
 

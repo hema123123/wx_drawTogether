@@ -25,6 +25,8 @@ class Request {
       .every(f => f(res))
   }
 
+
+  //底层处理api请求
   request({ url, method, header = {}, data}) {
     return new Promise((resolve, reject) => {
         wx.request({
@@ -35,7 +37,7 @@ class Request {
             ...this._header,
             ...header
           },
-          success: res => this.intercept(res) && resolve(res),
+          success: res => {this.intercept(res) && resolve(res)},
           fail: reject
         })
      

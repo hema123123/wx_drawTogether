@@ -82,16 +82,17 @@ Page({
   getPicsList() {
     wx.showNavigationBarLoading()
     this.setData({ isLoaded: false})
-    $http.get(api.shopmall_index, this.data.ListConfig).then(res => {
-      setTimeout(function () { wx.hideNavigationBarLoading() }, 500)
+    $http.get(api.shopmall_index, this.data.ListConfig)
+    .then(res => {
+      wx.hideNavigationBarLoading()
       this.setData({ isLoaded: "hidden" })
       let data = this.data.picsList.concat(res.data.records);
       this.setData({ picsList: data });
-      console.log(res);
+      // console.log(res);
     }).catch(err => {
-      setTimeout(function () { wx.hideNavigationBarLoading() }, 500)
+      wx.hideNavigationBarLoading()
       this.setData({ isLoaded: "hidden" })
-      console.log(err);
+      console.log("shopmall_index page",err);
     });
   }
 })

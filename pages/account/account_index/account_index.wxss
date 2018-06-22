@@ -7,9 +7,15 @@
   color: #fff;
   font-size: 32rpx;
   line-height: 48rpx;
+  height: 160rpx;
   padding: 20rpx;
+  box-sizing: border-box;
   position: relative;
   background: #ff3f5c;
+}
+.userinfo button{
+  border:none;
+  color:#fff;
 }
 
 .userinfo .userinfo-avatar {
