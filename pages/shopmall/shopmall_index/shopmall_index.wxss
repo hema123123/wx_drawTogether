@@ -1,44 +1,11 @@
 /* pages/shopmall/shopmall_index/shopmall_index.wxss */
 
-.shopmal_index {
+.prolists {
+  width: 100%;
   flex-wrap: wrap;
 }
 
-.pic-list-item {
+.prolists-item {
   width: 45.5%;
-  font-size: 26rpx;
-  border-radius: 4rpx;
-  background: #fff;
   margin: 3% 0 0 3%;
-}
-
-.pic-list-item .pic-list-item-img {
-  width: 100%;
-  height: 340rpx;
-  overflow: hidden;
-}
-
-.pic-list-item .pic-list-item-img image {
-  width: 100%;
-}
-
-.pic-list-item .pic-list-item-name {
-  border-bottom: 1px solid #eee;
-}
-
-.pic-list-item .pic-list-item-name, .pic-list-item .pic-list-item-price {
-  margin: 0 20rpx;
-  padding: 20rpx 0;
-}
-
-.pic-list-item .pic-list-item-price {
-  color: #ff3f5c;
-  font-size: 32rpx;
-}
-
-.pic-list-item .pic-list-item-oldprice {
-  text-decoration: line-through;
-  margin-left: 10rpx;
-  font-size: 24rpx;
-  color: #888;
 }

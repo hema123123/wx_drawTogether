@@ -1,16 +1,9 @@
 <!--pages/shopmall/shopmall_index/shopmall_index.wxml-->
-<view class="container shopmal_index flex-row">
-  <block wx:for="{{picsList}}" wx:key="{{item.id}}">
-    <navigator url="../shopmall_pro/shopmall_pro?id={{item.id}}" class="pic-list-item">
-      <image class="pic-list-item-img" src="{{item.goods_img}}" mode="aspectFit" />
-      <view class="pic-list-item-name">
-        <text>{{item.name}}</text>
-      </view>
-      <view class="pic-list-item-price">
-        <text class="pic-list-item-newprice">￥{{item.price}}</text>
-        <text class="pic-list-item-oldprice" wx:if="{{item.price < item.sale_price}}">￥{{item.sale_price}}</text>
-      </view>
-    </navigator>
-  </block>
-  <loading class="loading" hidden="{{isLoaded}}"></loading>
+<view class="container shopmal_index">
+  <view class="flex-row prolists">
+    <block wx:for="{{picsList}}" wx:key="{{item.id}}">
+      <prolist product="{{item}}" class="prolists-item"></prolist>
+    </block>
+  </view>
+  <loading class="loading" ishidden="{{ishidden}}"></loading>
 </view>

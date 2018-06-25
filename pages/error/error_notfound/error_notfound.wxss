@@ -1,0 +1,6 @@
+/* pages/error/error_notfound.wxss */
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,4 @@
+<!--pages/error/error_notfound.wxml-->
+<view class="container">
+  页面出错啦!!
+</view>

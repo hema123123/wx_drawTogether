@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/error/error_notfound",
     "pages/shopmall/shopmall_index/shopmall_index",
     "pages/shopmall/shopmall_pro/shopmall_pro",
-    "pages/account/account_index/account_index",
     "pages/list/list_index/list_index",
+    "pages/account/account_index/account_index",
+    "pages/error/error_notfound/error_notfound",
     "pages/index/index",
     "pages/logs/logs"
   ],

@@ -43,27 +43,17 @@
   margin-right: 10rpx;
 }
 
-.pro-detail {
-  padding: 20rpx;
-  background: #fff;
-  text-align: center;
-}
+/* 标题 */
 
-.pro-detail .pro-detail-title {
+
+.pro-title {
   font-size: 36rpx;
   font-weight: bold;
   color: #353535;
   position: relative;
 }
 
-.pro-detail .pro-detail-con {
-  
-  margin-top: 20rpx;
-  color: #888;
-  font-size: 32rpx;
-}
-
-.pro-detail .pro-detail-title::before, .pro-detail .pro-detail-title::after {
+.pro-title::before, .pro-title::after {
   content: "";
   width: 8rpx;
   height: 8rpx;
@@ -73,10 +63,40 @@
   top: 50%;
 }
 
-.pro-detail .pro-detaol-title::before {
+.pro-title::before {
   left: -20rpx;
 }
 
-.pro-detail .pro-detaol-title::after {
+.pro-title::after {
   right: -20rpx;
+}
+
+/* 商品详细 */
+
+.pro-detail {
+  background: #fff;
+  padding: 20rpx 0;
+}
+
+.pro-detail .pro-detail-con {
+  margin: 20rpx;
+  color: #888;
+  font-size: 32rpx;
+}
+
+.pro-detail,.pro-hot{
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+}
+
+/* 热销商品 */
+.pro-hot .prolists {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.pro-hot .prolists-item {
+  width: 45.5%;
+  margin: 3% 0 0 3%;
 }

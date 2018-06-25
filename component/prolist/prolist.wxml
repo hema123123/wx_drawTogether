@@ -1,0 +1,13 @@
+<!--component/prolist/prolist.wxml-->
+<view class="prolist-item">
+  <navigator url="../shopmall_pro/shopmall_pro?id={{product.id}}">
+    <image class="prolist-item-img" src="{{product.goods_img}}" mode="aspectFit" />
+    <view class="prolist-item-name">
+      <text>{{product.name}}</text>
+    </view>
+    <view class="prolist-item-price">
+      <text wx:if="{{product.sale_price<product.price}}">￥{{product.sale_price}}</text>
+      <text class="{{product.sale_price<product.price?'old-price':''}}">￥{{product.price}}</text>
+    </view>
+  </navigator>
+</view>

@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "商城",
   "usingComponents": {
-    "loading": "../../../component/loading/loading"
+    "loading": "../../../component/loading/loading",
+    "prolist":"../../../component/prolist/prolist"
   }
 }

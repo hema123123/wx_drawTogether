@@ -11,7 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isLoaded:false,
+    ishidden:false,
     picsList: [],
     ListConfig: {
       page_no: 1,
@@ -81,17 +81,20 @@ Page({
 
   getPicsList() {
     wx.showNavigationBarLoading()
-    this.setData({ isLoaded: false})
+    this.setData({ ishidden: false})
     $http.get(api.shopmall_index, this.data.ListConfig)
     .then(res => {
       wx.hideNavigationBarLoading()
-      this.setData({ isLoaded: "hidden" })
+      this.setData({ ishidden: true })
       let data = this.data.picsList.concat(res.data.records);
       this.setData({ picsList: data });
       // console.log(res);
     }).catch(err => {
       wx.hideNavigationBarLoading()
-      this.setData({ isLoaded: "hidden" })
+      Wx.navigateTo({
+        url: '../../error/error_notfound/error_notfound',
+      })
+      this.setData({ ishidden: true })
       console.log("shopmall_index page",err);
     });
   }

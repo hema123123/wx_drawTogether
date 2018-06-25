@@ -15,7 +15,12 @@ Page({
    */
   data: {
     pro: {},
-    isLoaded:false
+    picsList:[],
+    isLoaded:false,
+    ListConfig:{
+      page_no: 1,
+      page_size: 6,
+    }
   },
 
   /**
@@ -27,7 +32,6 @@ Page({
       "title": "玩命加载中"
     })
    $http.get(api.shopmall_pro, { id: options.id })
-  //  $http.get(api.shopmall_pro, { id: 65 })
       .then(res => {
         wx.hideNavigationBarLoading()
         this.setData({ pro: res.data.record, isLoaded: true });
@@ -36,6 +40,17 @@ Page({
         })
         WxParse.wxParse('article', 'html', res.data.record.content, this);
       }).catch(err => { console.log(err) });
+
+
+
+
+
+   $http.get(api.shopmall_index, this.data.ListConfig)
+     .then(res => {
+       this.setData({ picsList: res.data.records });
+     }).catch(err => {
+       console.log(err);
+     });
 
   },
 

@@ -1,10 +1,10 @@
-// component/loading/loading.js
+// component/prolist/prolist.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    ishidden:Boolean
+    product:Object
   },
 
   /**

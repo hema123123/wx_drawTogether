@@ -14,10 +14,21 @@
     <image class="pro-icon-img" src="../../../static/images/pop_right_icon.png" />
     <text>正品承诺：品质商品一起画认证</text>
   </view>
-  <view class="pro-detail flex-colunm">
-    <text class="pro-detail-title">商品详情</text>
+  <view class="pro-detail flex-column">
+    <text class="pro-title">商品详情</text>
     <view class="pro-detail-con">
-     <template is="wxParse" data="{{wxParseData:article.nodes}}" /> 
-     </view>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+
+
+
+  <view class="pro-hot flex-column">
+    <text class="pro-title">热销商品</text>
+    <view class="flex-row prolists">
+      <block wx:for="{{picsList}}" wx:key="{{item.id}}">
+        <prolist wx:if="{{item.id!=pro.id}}" product="{{item}}" class="prolists-item"></prolist>
+      </block>
+    </view>
   </view>
 </view>
