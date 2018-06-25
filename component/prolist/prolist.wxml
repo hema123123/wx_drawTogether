@@ -1,6 +1,11 @@
 <!--component/prolist/prolist.wxml-->
 <view class="prolist-item">
   <navigator url="../shopmall_pro/shopmall_pro?id={{product.id}}">
+    <view class="prolist-saleout" wx:if="{{!product.count}}">
+      <view class="prolist-saleout-box">
+        <text class="prolist-saleout-box-con">已售完</text>
+      </view>
+    </view>
     <image class="prolist-item-img" src="{{product.goods_img}}" mode="aspectFit" />
     <view class="prolist-item-name">
       <text>{{product.name}}</text>

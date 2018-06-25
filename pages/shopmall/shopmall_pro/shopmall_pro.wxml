@@ -21,8 +21,6 @@
     </view>
   </view>
 
-
-
   <view class="pro-hot flex-column">
     <text class="pro-title">热销商品</text>
     <view class="flex-row prolists">
@@ -30,5 +28,16 @@
         <prolist wx:if="{{item.id!=pro.id}}" product="{{item}}" class="prolists-item"></prolist>
       </block>
     </view>
+  </view>
+
+  <view class="paybottom flex-row">
+    <view class="charge_info flex-column">
+      <view class="pro-price">
+        <block wx:if="{{pro.sale_price<pro.price}}">￥{{pro.sale_price}}</block>
+        <block wx:else>￥{{pro.price}}</block>
+      </view>
+      <view>还剩{{pro.count}}个</view>
+    </view>
+    <button class="buybotton" disabled="{{!pro.count}}" >购买</button>
   </view>
 </view>

@@ -15,12 +15,8 @@ Page({
    */
   data: {
     pro: {},
-    picsList:[],
-    isLoaded:false,
-    ListConfig:{
-      page_no: 1,
-      page_size: 6,
-    }
+    picsList: [],
+    isLoaded: false
   },
 
   /**
@@ -31,34 +27,11 @@ Page({
     wx.setNavigationBarTitle({
       "title": "玩命加载中"
     })
-   $http.get(api.shopmall_pro, { id: options.id })
-      .then(res => {
-        wx.hideNavigationBarLoading()
-        this.setData({ pro: res.data.record, isLoaded: true });
-        wx.setNavigationBarTitle({
-          "title": this.data.pro.name.split("丨")[0]
-        })
-        WxParse.wxParse('article', 'html', res.data.record.content, this);
-      }).catch(err => { console.log(err) });
 
-
-
-
-
-   $http.get(api.shopmall_index, this.data.ListConfig)
-     .then(res => {
-       this.setData({ picsList: res.data.records });
-     }).catch(err => {
-       console.log(err);
-     });
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+    this.getCurrentDetails(options.id);
+    // this.getCurrentDetails(65);
+    this.getHotProducts({ page_no:1,page_size:6});
+    
   },
 
   /**
@@ -101,5 +74,25 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getCurrentDetails(id) {
+    $http.get(api.shopmall_pro, { id: id })
+      .then(res => {
+        wx.hideNavigationBarLoading()
+        this.setData({ pro: res.data.record, isLoaded: true });
+        wx.setNavigationBarTitle({
+          "title": this.data.pro.name.split("丨")[0]
+        })
+        WxParse.wxParse('article', 'html', res.data.record.content, this);
+      }).catch(err => { console.log(err) });
+  },
+  getHotProducts(obj){
+    $http.get(api.shopmall_index, obj)
+      .then(res => {
+        this.setData({ picsList: res.data.records });
+      }).catch(err => {
+        console.log(err);
+      })
   }
+  
 })

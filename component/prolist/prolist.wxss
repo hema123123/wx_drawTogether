@@ -1,6 +1,47 @@
 /* component/prolist/prolist.wxss */
 
 .prolist-item {
+  position: relative;
+}
+
+
+/* 无货状态 */
+.prolist-saleout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prolist-saleout-box {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+  overflow: hidden;
+  transform: rotateZ(-30deg);
+}
+
+.prolist-saleout-box .prolist-saleout-box-con {
+  width: 100%;
+  height: 40rpx;
+  display: block;
+  margin: 60rpx 0;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #fff;
+  color: #999;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+
+
+
+.prolist-item {
   width: 100%;
   font-size: 26rpx;
   border-radius: 4rpx;
@@ -31,7 +72,7 @@
 .prolist-item .prolist-item-price {
   color: #ff3f5c;
   font-size: 32rpx;
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 
 .prolist-item .old-price {

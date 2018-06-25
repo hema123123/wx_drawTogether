@@ -87,10 +87,13 @@
 .pro-detail,.pro-hot{
   display: flex;
   align-items: center;
-  margin: 20rpx 0;
 }
 
 /* 热销商品 */
+.pro-hot{
+  padding-bottom: 90rpx;
+  margin: 20rpx 0; 
+}
 .pro-hot .prolists {
   width: 100%;
   flex-wrap: wrap;
@@ -99,4 +102,36 @@
 .pro-hot .prolists-item {
   width: 45.5%;
   margin: 3% 0 0 3%;
+}
+
+
+/* 购买按钮栏 */
+.paybottom{
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  bottom: 0;
+  color:#888;
+}
+.paybottom .pro-price{
+  color:#ff3f5c;
+  font-weight: 700;
+  font-size: 36rpx;
+}
+.paybottom .charge_info{
+  flex: 1;
+  font-size: 24rpx;
+  background: rgba(255,255,255,.9);
+  justify-content: center;
+  align-items: center;
+}
+.paybottom .buybotton{
+  flex:2;
+  background: #ff3f5c;
+  color:#fff;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
 }

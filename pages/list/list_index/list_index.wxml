@@ -1,2 +1,4 @@
 <!--pages/list/list_index/list_index.wxml-->
-<text>pages/list/list_index/list_index.wxml</text>
+<view class="container">
+  <searchbar></searchbar>
+</view>
