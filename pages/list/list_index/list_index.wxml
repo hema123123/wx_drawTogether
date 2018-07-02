@@ -1,4 +1,55 @@
 <!--pages/list/list_index/list_index.wxml-->
 <view class="container">
-  <searchbar></searchbar>
+  <view class="city flex-row">
+    <view class="city-location flex-row">
+      <text class="city-location-selected">上海</text>
+      <image class="icon_arrow" src="../../../static/images/list_img/list_seratch_icon_1.png" />
+    </view>
+    <searchbar class="city-search"></searchbar>
+  </view>
+
+
+  <view class="filter flex-row">
+    <view>
+      <text>全市</text>
+      <image class="icon_arrow" src="../../../static/images/list_img/list_seratch_icon_1.png" />
+    </view>
+    <view>
+      <text>时间排序</text>
+      <image class="icon_arrow" src="../../../static/images/list_img/list_seratch_icon_1.png" />
+    </view>
+    <view>
+      <text>1人</text>
+      <image class="icon_arrow" src="../../../static/images/list_img/list_seratch_icon_1.png" />
+    </view>
+  </view>
+
+
+
+  <view class="product">
+    <block wx:for="{{lists}}" wx:key="{{item.id}}">
+      <view class="product-item">
+        <view class="product-item-img">
+          <image src="{{item.event_img}}" />
+          <view class="product-item-time flex-column">
+            <text>{{item.event_date}}</text>
+            <text>{{item.event_dtime}}</text>
+          </view>
+          <!-- <view class="product-item-ticket">
+            余票{{item.left_num}}张
+          </view> -->
+        </view>
+        <view class="product-item-infor flex-column">
+          <text class="product-item-infor-event_name">{{item.event_name}}</text>
+          <text class="product-item-infor-venue_name">{{item.venue_name}}</text>
+        </view>
+        <view class="product-item-artist flex-row">
+          <image class="product-item-artist-avatar" src="{{item.artist_avatar}}" />
+          <text class="product-item-artist-name">{{item.artist_name}}</text>
+          <star key="{{item.artist_level}}" style="width:200rpx;height:28rpx;background:pink;"></star>
+        </view>
+      </view>
+    </block>
+  </view>
+
 </view>

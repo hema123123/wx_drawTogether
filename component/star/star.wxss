@@ -1,0 +1,37 @@
+/* component/star/star.wxss */
+
+.star {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.star .star-image {
+  position: relative;
+  src: "./images/list_Star_icon_3.png";
+}
+
+.star .star-image .item {
+  position: absolute;
+  top: 0;
+}
+
+/* size：48 */
+
+.star .star-image.size28 {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.star .size28 .halfLeft {
+  left: 0rpx;
+}
+
+.star .size28 .halfRight {
+  left: 14rpx;
+}
+
+.star .size28 .item {
+  width: 14rpx;
+  height: 28rpx;
+}

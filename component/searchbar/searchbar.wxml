@@ -1,2 +1,5 @@
 <!--component/searchbar/searchbar.wxml-->
-<text>component/searchbar/searchbar.wxml</text>
+<view class="searchbar">
+  <input class="searchbar-input" placeholder="输入城市/拼音查询"/>
+  <image class="searchbar-icon" src="../../static/images/home_icon_search.png"/>
+</view>

@@ -1,1 +1,24 @@
 /* component/searchbar/searchbar.wxss */
+
+.searchbar {
+  position: relative;
+}
+
+.searchbar-input {
+  width: 100%;
+  height: 60rpx;
+  font-size: 32rpx;
+  padding-left: 30rpx;
+  border-radius: 80rpx;
+  box-sizing: border-box;
+  background: #f2f2f2;
+}
+
+.searchbar-icon {
+  position: absolute;
+  right: 30rpx;
+  top: 8rpx;
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 1;
+}

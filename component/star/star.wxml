@@ -1,0 +1,12 @@
+<!--component/star/star.wxml-->
+<view class="star">
+  <block wx:for="{{stars}}" wx:key="{{item}}" >
+  <!-- style="left: {{item*sizeNum}}rpx" -->
+    <image class="star-image size{{sizeNum}}"  src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+      <block wx:if="{{isbindTap}}">
+        <view class="item halfLeft" data-key="{{item+0.5}}" bindtap="_selectLeft"></view>
+        <view class="item halfRight" data-key="{{item+1}}" bindtap="_selectRight"></view>
+      </block>
+    </image>
+  </block>
+</view>

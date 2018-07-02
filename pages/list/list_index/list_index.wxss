@@ -1,1 +1,92 @@
 /* pages/list/list_index/list_index.wxss */
+
+.city {
+  height: 100rpx;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.city .city-location {
+  flex: 0 0 100rpx;
+  width: 100rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  justify-content: space-around;
+  align-items: center;
+  color: #353535;
+}
+
+.icon_arrow {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.city .city-search {
+  flex: 1;
+}
+
+.filter {
+  align-items: center;
+  height: 80rpx;
+  background: #fff;
+  font-size: 28rpx;
+  color: #353535;
+}
+
+.filter view {
+  width: 33.3%;
+  text-align: center;
+}
+
+.filter image {
+  margin-left: 10rpx;
+}
+
+/* 列表 */
+
+.product-item {
+  
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 10%;
+}
+
+.product-item-img {
+  position: relative;
+  color:#fff;
+}
+
+.product-item-img .product-item-time {
+  position: absolute;
+  top: 0;
+  left: 20rpx;
+  background: #ff3f5c;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 1.6;
+  padding:10rpx 20rpx;
+}
+.product-item-img image{
+   width: 100%; 
+}
+
+.product-item-img .product-item-ticket {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+.product-item-infor{
+  border-bottom: 1px solid #eee;
+}
+
+
+.product-item-artist .product-item-artist-avatar{
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  align-items: center;
+}
