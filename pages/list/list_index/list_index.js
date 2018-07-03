@@ -11,24 +11,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    lists: []
+    lists: [],
+    ishidden:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showNavigationBarLoading()
     $http.get("/yqhbsp/event/search?&city_code=3101&p=&d=&stext=&start=2018-07-02&end=2018-12-29&num=1&page_no=1&page_size=5&sort=closing_time%7C0")
       .then(res => {
+        wx.hideNavigationBarLoading()
         let data = res.data.records;
         data.map(item => {
           item.event_date = this.getTime(item.event_time, 0);
           item.event_dtime = this.getTime(item.event_time, 1);
         })
-        this.setData({ lists: data })
+        this.setData({ lists: data, ishidden:true })
+      }).catch(err=>{
+        wx.hideNavigationBarLoading()
+        this.setData({ ishidden: true })
+        Wx.navigateTo({
+          url: '../../error/error_notfound/error_notfound',
+        })
       })
-
-    // this.getTime("2018-07-06 19:00:00", 0); this.getTime("2018-07-06 19:00:00", 1)
   },
 
   /**
@@ -85,6 +92,11 @@ Page({
     let t = new Date(time)
     const weekName = ['日', '一', '二', '三', '四', '五', '六'];
     return index == 0 ? (1 + t.getMonth()) + '月' + t.getDate() + '日' : '周' + weekName[t.getDay()] + ' ' + (t.getHours() < 10 ? '0' + t.getHours() : t.getHours()) + ':' + (t.getMinutes() < 10 ? '0' + t.getMinutes() : t.getMinutes())
+  },
+  gotoCityChange(){
+    Wx.navigateTo({
+      url: '../list_city_change/list_city_change',
+    })
   }
 
 })

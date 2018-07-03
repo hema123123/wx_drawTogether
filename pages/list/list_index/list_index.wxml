@@ -1,7 +1,7 @@
 <!--pages/list/list_index/list_index.wxml-->
 <view class="container">
   <view class="city flex-row">
-    <view class="city-location flex-row">
+    <view class="city-location flex-row" bindtap="gotoCityChange">
       <text class="city-location-selected">上海</text>
       <image class="icon_arrow" src="../../../static/images/list_img/list_seratch_icon_1.png" />
     </view>
@@ -25,28 +25,39 @@
   </view>
 
 
+  <loading ishidden="{{ishidden}}"></loading>
 
   <view class="product">
     <block wx:for="{{lists}}" wx:key="{{item.id}}">
-      <view class="product-item">
+
+      <view class="product-item" >
+        <view class="prolist-saleout" wx:if="{{item.event_status=='SOLDOUT'}}">
+          <view class="prolist-saleout-box">
+            <text class="prolist-saleout-box-con">已售完</text>
+          </view>
+        </view>
         <view class="product-item-img">
-          <image src="{{item.event_img}}" />
+          <image src="{{item.event_img}}" mode="aspectFill" />
           <view class="product-item-time flex-column">
             <text>{{item.event_date}}</text>
             <text>{{item.event_dtime}}</text>
           </view>
-          <!-- <view class="product-item-ticket">
-            余票{{item.left_num}}张
-          </view> -->
+          <view class="product-item-ticket flex-row" wx:if="{{item.event_status!='SOLDOUT'}}">
+            <image src="../../../static/images/list_img/list_ticket_icon.png" />
+            <text>余票{{item.left_num}}张</text>
+          </view>
         </view>
         <view class="product-item-infor flex-column">
           <text class="product-item-infor-event_name">{{item.event_name}}</text>
-          <text class="product-item-infor-venue_name">{{item.venue_name}}</text>
+          <view class="product-item-infor-venue_name flex-row">
+            <text>{{item.venue_name}}</text>
+            <image src="../../../static/images/list_img/list_seratch_icon_2.png" />
+          </view>
         </view>
         <view class="product-item-artist flex-row">
           <image class="product-item-artist-avatar" src="{{item.artist_avatar}}" />
           <text class="product-item-artist-name">{{item.artist_name}}</text>
-          <star key="{{item.artist_level}}" style="width:200rpx;height:28rpx;background:pink;"></star>
+          <star key="{{item.artist_level}}"></star>
         </view>
       </view>
     </block>

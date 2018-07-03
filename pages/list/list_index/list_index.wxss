@@ -1,6 +1,7 @@
 /* pages/list/list_index/list_index.wxss */
 
 .city {
+  padding: 0 20rpx;
   height: 100rpx;
   align-items: center;
   background: #fff;
@@ -15,6 +16,7 @@
   justify-content: space-around;
   align-items: center;
   color: #353535;
+  margin-right: 20rpx;
 }
 
 .icon_arrow {
@@ -46,7 +48,6 @@
 /* 列表 */
 
 .product-item {
-  
   background: #fff;
   border-radius: 20rpx;
   margin: 10%;
@@ -54,39 +55,123 @@
 
 .product-item-img {
   position: relative;
-  color:#fff;
+  color: #fff;
 }
 
 .product-item-img .product-item-time {
   position: absolute;
   top: 0;
-  left: 20rpx;
+  left: 40rpx;
   background: #ff3f5c;
   font-size: 24rpx;
   text-align: center;
   line-height: 1.6;
-  padding:10rpx 20rpx;
+  padding: 10rpx 20rpx;
 }
-.product-item-img image{
-   width: 100%; 
-}
+
+ .product-item-img image {
+  width: 100%;
+} 
 
 .product-item-img .product-item-ticket {
   position: absolute;
-  bottom: 0;
+  bottom: 10rpx;
+  left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  font-size: 24rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.product-item-img .product-item-ticket image {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 6rpx;
+}
+
+/* 列表信息 */
+.product-item{
+  position: relative;
+}
+.prolist-saleout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.prolist-saleout-box {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+  overflow: hidden;
+  transform: rotateZ(-30deg);
+}
+
+.prolist-saleout-box .prolist-saleout-box-con {
+  width: 100%;
+  height: 40rpx;
+  display: block;
+  margin: 60rpx 0;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #fff;
+  color: #999;
+  font-size: 24rpx;
+  font-weight: 700;
 }
 
 
-.product-item-infor{
+
+.product-item-infor {
+  padding: 20rpx 0;
+  margin: 0 20rpx;
   border-bottom: 1px solid #eee;
 }
 
+.product-item-infor .product-item-infor-event_name {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #353535;
+  line-height: 1.6;
+  margin-bottom: 10rpx;
+}
 
-.product-item-artist .product-item-artist-avatar{
+.product-item-infor .product-item-infor-venue_name {
+  font-size: 24rpx;
+  color: #666;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-item-infor .product-item-infor-venue_name image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+/* 列表作者 */
+
+.product-item-artist {
+  align-items: center;
+  padding: 20rpx;
+}
+
+.product-item-artist .product-item-artist-avatar {
   width: 48rpx;
   height: 48rpx;
   border-radius: 50%;
   align-items: center;
+}
+
+.product-item-artist .product-item-artist-name {
+  font-size: 28rpx;
+  color: #666;
+  margin: 0 10rpx;
 }

@@ -6,7 +6,8 @@
     "pages/account/account_index/account_index",
     "pages/error/error_notfound/error_notfound",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/list/list_city_change/list_city_change"
   ],
   "window": {
     "backgroundTextStyle": "light",

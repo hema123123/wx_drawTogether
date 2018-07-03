@@ -1,4 +1,4 @@
-const app=getApp();
+const app = getApp();
 
 const formatTime = date => {
   const year = date.getFullYear()
